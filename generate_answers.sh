@@ -14,7 +14,7 @@ find "$directory"/*.py | while read -r file; do
 
   output=$(python3 "$file" 2>&1)
 
-  printf "%-3s %-40s -> %s\n" "$file_name" "$first_line" "$output" >>"$output_file"
+  printf "%s %-40s -> %s\n" "$file_name" "$first_line" "$output" >>"$output_file"
 
   ((count++))
 
